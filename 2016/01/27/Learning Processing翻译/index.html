@@ -1,0 +1,740 @@
+<!doctype html>
+<html class="theme-next use-motion theme-next-mist">
+<head>
+    
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+
+
+
+  <link href='//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.4"/>
+
+
+
+
+  <meta name="keywords" content="Learning Processing,翻译," />
+
+
+
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.4" />
+
+
+<meta name="description" content="本书为Daniel Shiffman的《Learning Processing》的个人翻译。原书地址：http://pan.baidu.com/s/1gelQAg7       密码：naja
+因为在网上并没有找到《Learning Processing》这本书的中文版，所以突然想试着翻译一下来学习Processing，本人英语水平有限，欢迎提供指正。
+《Processing学习》">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Daniel Shiffman——《Learning Processing》个人翻译">
+<meta property="og:url" content="http://yoursite.com/2016/01/27/Learning Processing翻译/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="本书为Daniel Shiffman的《Learning Processing》的个人翻译。原书地址：http://pan.baidu.com/s/1gelQAg7       密码：naja
+因为在网上并没有找到《Learning Processing》这本书的中文版，所以突然想试着翻译一下来学习Processing，本人英语水平有限，欢迎提供指正。
+《Processing学习》">
+<meta property="og:image" content="http://7xo04p.com1.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160210141402.png">
+<meta property="og:image" content="http://7xo04p.com1.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160127144737.png">
+<meta property="og:image" content="http://7xo04p.com1.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160128122209.png">
+<meta property="og:image" content="http://7xo04p.com1.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160201152843.png">
+<meta property="og:image" content="http://7xo04p.com1.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160201152921.png">
+<meta property="og:image" content="http://7xo04p.com1.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160210131019.png">
+<meta property="og:image" content="http://7xo04p.com1.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160211142705.png">
+<meta property="og:image" content="http://7xo04p.com1.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160212123324.png">
+<meta property="og:image" content="http://7xo04p.com1.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160217115714.png">
+<meta property="og:image" content="http://7xo04p.com1.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160217120720.png">
+<meta property="og:image" content="http://7xo04p.com1.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160217122054.png">
+<meta property="og:image" content="http://7xo04p.com1.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160222164748.png">
+<meta property="og:image" content="http://7xo04p.com1.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160222164814.png">
+<meta property="og:image" content="http://7xo04p.com1.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160222164830.png">
+<meta property="og:image" content="http://7xo04p.com1.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160222164847.png">
+<meta property="og:image" content="http://7xo04p.com1.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160222164905.png">
+<meta property="og:image" content="http://7xo04p.com1.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160222164947.png">
+<meta property="og:image" content="http://7xo04p.com1.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160222170107.png">
+<meta property="og:image" content="http://7xo04p.com1.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160222165010.png">
+<meta property="og:image" content="http://7xo04p.com1.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160222165051.png">
+<meta property="og:image" content="http://7xo04p.com1.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160222165124.png">
+<meta property="og:updated_time" content="2016-02-22T09:07:54.747Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Daniel Shiffman——《Learning Processing》个人翻译">
+<meta name="twitter:description" content="本书为Daniel Shiffman的《Learning Processing》的个人翻译。原书地址：http://pan.baidu.com/s/1gelQAg7       密码：naja
+因为在网上并没有找到《Learning Processing》这本书的中文版，所以突然想试着翻译一下来学习Processing，本人英语水平有限，欢迎提供指正。
+《Processing学习》">
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: 'post'
+  };
+</script>
+
+    <title> Daniel Shiffman——《Learning Processing》个人翻译 // Hexo </title>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" lang="">
+<!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+
+
+
+
+<div class="container one-column page-post-detail">
+    <div class="headband"></div>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+        <div class="header-inner"><h1 class="site-meta">
+  <span class="logo-line-before"><i></i></span>
+  <a href="/" class="brand" rel="start">
+      <span class="logo">
+        <i class="icon-logo"></i>
+      </span>
+      <span class="site-title">Hexo</span>
+  </a>
+  <span class="logo-line-after"><i></i></span>
+</h1>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu ">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            <i class="menu-item-icon icon-home"></i> <br />
+            首頁
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            <i class="menu-item-icon icon-categories"></i> <br />
+            分類
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            <i class="menu-item-icon icon-about"></i> <br />
+            關於
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            <i class="menu-item-icon icon-archives"></i> <br />
+            歸檔
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            <i class="menu-item-icon icon-tags"></i> <br />
+            標籤
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+        </div>
+    </header>
+
+    <main id="main" class="main">
+        <div class="main-inner">
+            <div id="content" class="content">
+                
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              Daniel Shiffman——《Learning Processing》个人翻译
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          發表於
+          <time itemprop="dateCreated" datetime="2016-01-27T14:53:38+08:00" content="2016-01-27">
+            2016-01-27
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; 分類於
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a href="/categories/自然模拟/" itemprop="url" rel="index"><span itemprop="name">自然模拟</span></a></span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><p><img src="http://7xo04p.com1.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160210141402.png" alt=""><br>本书为Daniel Shiffman的《Learning Processing》的个人翻译。<br>原书地址：<a href="http://pan.baidu.com/s/1gelQAg7" target="_blank" rel="external">http://pan.baidu.com/s/1gelQAg7 </a>      密码：naja</p>
+<p>因为在网上并没有找到《Learning Processing》这本书的中文版，所以突然想试着翻译一下来学习Processing，本人英语水平有限，欢迎提供指正。</p>
+<h1 id="《Processing学习》"><a href="#《Processing学习》" class="headerlink" title="《Processing学习》"></a>《Processing学习》</h1><p>　　　　　　　　　————图像设计、动画及交互技术新手指南</p>
+<p>Daniel Shiffman<a id="more"></a></p>
+<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><p><strong>介绍</strong></p>
+<p><strong>课程一：开始</strong><br>　　第1章：像素<br>　　第2章：Processing<br>　　第3章：交互<br><strong>课程二：你需要知道的事情</strong><br>　　第4章：变量<br>　　第5章：条件语句<br>　　第6章：循环<br><strong>课程三：组成</strong><br>　　第7章：功能<br>　　第8章：对象<br><strong>课程四：老调重弹</strong><br>　　第9章：数组<br><strong>课程五：把他们放到一起</strong><br>　　第10章：算法<br>　　第11章：调试<br>　　第12章：库<br><strong>课程六：围绕你选择的世界</strong><br>　　第13章：数学<br>　　第14章：平移和选择（在3D中）<br><strong>课程七：显微镜下的像素</strong><br>　　第15章：图像<br>　　第16章：视频<br><strong>课程八：外面的世界</strong><br>　　第17章：文本<br>　　第18章：数据输入<br>　　第19章：数据流<br><strong>课程九：声音制作</strong><br>　　第20章：声音<br>　　第21章：出口<br><strong>课程十：超越Processing</strong><br>　　第22章：先进的面向对象编程<br>　　第23章：Java</p>
+<p><strong>附录：常见错误</strong><br><strong>索引</strong></p>
+<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><h3 id="这是一本什么书？"><a href="#这是一本什么书？" class="headerlink" title="这是一本什么书？"></a>这是一本什么书？</h3><p>阅读本书需要解放思想，本书是理解计算机基础，编写你自己的代码以及在没有软件工具基础上去创建你自己媒体的第一步。这个故事不是留给计算机科学家或者工程师的，而是留给你的。</p>
+<h3 id="本书适合哪些人？"><a href="#本书适合哪些人？" class="headerlink" title="本书适合哪些人？"></a>本书适合哪些人？</h3><p>本书适合初学者。如果你在一生中从来没有写过一行代码，那么你来对了地方。不要怀疑，在本书的九个章节里，编程的基本原理将会被一步一步慢慢地建立起来。除了知道电脑的基本操作——开机，上网，启动程序这样的事情之外，你不需要任何背景知识。</p>
+<p>因为本书使用Processing软件，它对于在平面设计，绘画，雕塑，建筑，电影，视频，插图，网页设计等视觉领域方面学习或工作的人来说是非常好用的。如果你是这些方面的成员之一（哪怕包括只会使用计算机），你或许精通某个专门的软件包，可能还不止一个，比如：Photoshop,Illustrator,AutoCAD,Maya,AfterEffects等。本书的目的之一就是从现有工具的圈子中把你释放出来。除了使用别人的工具外你能做什么？能够设计什么？能够制作你自己的东西吗？如果你对这些问题感兴趣，那你就来对了地方。</p>
+<p>如果你有过编程的经验，但是对学习Processing感兴趣，这本书任然对你有用。本书的前部分章节将会帮助你快速复习，并且为后半部分的深入问题打下坚实的基础。</p>
+<h3 id="什么是Processing"><a href="#什么是Processing" class="headerlink" title="什么是Processing"></a>什么是Processing</h3><p>我们先来聊一聊CS101，也许我们可以用java来教学。这是课堂上第一示例程序的的输出展示：<br><img src="http://7xo04p.com1.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160127144737.png" alt=""><br>一般情况下，程序员通过命令行学习基础知识：</p>
+<ol>
+<li>TEXT IN→以文本形式写入代码</li>
+<li>TEXT OUT→在命令行中输出你写的代码</li>
+<li>TEXT INTERACTION→用户可以通过输入文本来与程序互动</li>
+</ol>
+<p>示例程序输出的”Hello World!”是一个老梗了，一个程序员的习惯就是学会在任何给定的语言写的第一个程序就是”Hello World!”。它最早出现在1974年贝尔实验室的Brian Kernighan写的”C语言编程：教程A”的。</p>
+<p>学习Processing的优点就是它强调了一个更加直观的视觉响应环境，它更有利于于艺术家和设计师学习编程。</p>
+<ol>
+<li>TEXT IN→以文本形式写入代码</li>
+<li>VISUALS OUT→你的代码在窗口中产生图像</li>
+<li>MOUSE INTERACTION→用户可以通过鼠标与这些图像进行互动。(你还会从本书中看到更多的功能！)。</li>
+</ol>
+<p>Processing的”Hello World”程序可能像这样：<br><img src="http://7xo04p.com1.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160128122209.png" alt=""><br>Hello, Shapes!</p>
+<p>尽管它看起来挺友好的，但却不怎么引人注目，并且也不是”Hello World”程序。但关键是学习即时的图像反馈，这是很大区别。</p>
+<p>Processing不是第一个遵循这个例子的语言。1967年，Daniel G.Bobrow，Wally Feurzeig和Seymour Papert共同开发了LOGO编程语言。有了LOGO语言，程序员可以通过写写指令带控制屏幕上的乌龟，制作图形以及进行设计。John Maeda的Design By Numbers(1999)给视觉设计师和艺术家引进了一种简单的易于使用的语法规则。</p>
+<p>尽管这两种语言都是非常简洁并且具有创新性，但是它们的功能却受到了限制。</p>
+<p>Processing语言是LOGO和Design By Numbers的直接后代，它于2001年诞生于麻省理工学院媒体实验室的”美学与计算”研究课题组。是由Casey Reas和Benjamin Fry以及John Maeda为研究生学习所开发的一款开源软件。</p>
+<blockquote>
+<p>Processing是一款针对想要编写图像，动画和声音的人所推出的一个开源编程语言环境。它被学生，艺术家，设计师，建筑师，研究院以及兴趣爱好者用于学习，涉及模型和生产制造。它也被用于在可视化的环境中进行计算机编程基础知识教学，也可以作为画板软件和专业的生产工具。Processing也是艺术家和设计师在相同领域中的专业软件的替代品。<br>——www.processing.org</p>
+</blockquote>
+<p>总的来说，Processing是一款极好的软件。首先，它是免费的。它不需要花一分钱。其次，因为Processing是建立在Java编程语言基础上的（这一点将在本书的最后章节进行进一步探讨），所以它是一个功能丰富的软件，它没有Logo和Design by Number的一些限制。很少有Processing不能做的。最后，Processing是一款开源软件。但在大多数情况下，这不是本书的关键点。当你深入学习之后，你会发现这些理念是非常明智的。这也就是众多开发者，老师，艺术家们聚在一起形成社区来分享工作，贡献想法以及扩展Processing功能的原因。</p>
+<p>我们可以通过浏览网站<a href="https://processing.org/" title="processing.org" target="_blank" rel="external">https://processing.org/</a>来揭开这个充满活力和创意的社区。在这里，新手和专家们在一起公开交换想法和作品，分享代码。尽管这个网站包括了完整的参考资料，也有很多实例帮助你开始入手，但它并没有对真正的初学者进行 一步一步的指导。本书就是为了让你有条不紊的通过基本的编程开加入社区，并且探索一些更深入的问题。</p>
+<p>更为重要的是，你要意识到尽管没有Processing的话，这边书可能也不会出现。但这边书本身并不仅仅是介绍Processing的书籍。本书的目的是教会你学会编程。我们选择用Processing作为我们的学习环境，但关键点在于核心计算的概念。当你探索其它语言和环境是，它将使你的数字化生活更进一步。</p>
+<h3 id="但我不需要学习-？"><a href="#但我不需要学习-？" class="headerlink" title="但我不需要学习__？"></a>但我不需要学习<strong><strong>__</strong></strong>？</h3><p>你知道你要做什么。没错，在空白处填空。你听到过一个编程语言环境 Flibideeflobidee。只要制作好了声音，你的朋友们就会对它赞不绝口。这一切多么容易。过去你需要一整天才能完成的事现在只要5分钟就搞定了。并且它可以在Mac上运行，在电脑上运行！你甚至可以编写一个宠物并与其对话，这在日本已经实现了！</p>
+<p>事情就是这样。最有魔力的编程语言可以解决你所有遇到的问题。但没有任何一种语言是完美的，Processing也伴随着一定的局限性和缺点。但Processing任然是你学习编程一种很好的开始。本书将会教会你编程的基本知识以便你在以后的生活中灵活的运用，无论你是使用Processing，Java，Actionscript, C, PHP或者是其它语言。</p>
+<p>的确，对于一些项目来说，使用其它的编程语言环境可能更好。但是Processing能很好的处理一些事情，尤其是对与媒体和屏幕相关的工作。许多人（包括我自己）每天都在使用Processing来工作。它被应用于Web应用，博物馆和画廊的艺术作品以及公共场合的展览。最近，我用Processing开发了一个图像视频实时显示系统（<a href="http://www.mostpixelsever.com" target="_blank" rel="external">http://www.mostpixelsever.com</a>），它能够在120英尺，也就是12步（没错，是步！）的视频墙上显示 InterActive部队纽约司令部休息室的情况。</p>
+<p>Processing不仅可以做这些，还可以用于学习，这一点尤为突出。它免费并且开源，它简单而有趣并且是可视化的。它面向对象（这一点我们以后再说）还可以在Macs，PCs和Linux上运行。</p>
+<p>所以我想告诉你，你不用担心能用Processing做什么，而是应该把注意点放在学习Processing基础知识上。这些知识能够带你走出本书去学习任何你想要学的语言。</p>
+<h3 id="通过本书做一些东西吧！"><a href="#通过本书做一些东西吧！" class="headerlink" title="通过本书做一些东西吧！"></a>通过本书做一些东西吧！</h3><p>比如说你是一个作家或者是一个编剧。你一般的时间都是坐在电脑前打字吗？或者用打印机。可能不是这样。也许当你晚上躺在床上是才会思如泉涌，或者你喜欢坐在公园的长椅上喂鸽子并喜欢在脑海里与它们说话。又或者在酒吧的一个深夜，你发现自己在餐巾纸上随意涂出了精彩的故事。</p>
+<p>当然，编写软件，程序和代码是不一样的。你很容易忘记你的作品是以计算机为基础产生的。但关键是你必须找到让你头脑放松的时间以便进行思考，从椅子上，桌子上，或电脑上获得灵感。比如我，我最喜欢在慢跑时思考程序。</p>
+<p>当然，在电脑上运行也是非常重要的步骤。但我的意思是，如果你仅仅是躺在游泳池旁进行开发，你的生活不会因此发生变化。但一直坐在电脑前呆呆地看着显示器也不行。</p>
+<p>本书所写的内容只是学习的第一步，你要确保在没有键盘的情况下经常通过这些代码去思考。我在书里写了很多练习，包括填空题。（所有填空题的答案都能在本书网站<a href="http://www.learningprocessing.com" target="_blank" rel="external">http://www.learningprocessing.com</a>中找到，以便你检查）好好利用这个网站！当你脑海里闪现出一个想法时，就把它记录下来。你可以把本书作为工作簿并把你的想法刻画下来（你也可以用你自己的速写本）。</p>
+<p>我建议你花一半的时间去读本书，另外一半的时间在计算机上通过实例代码去实验。</p>
+<h3 id="我应该怎样读这本书？"><a href="#我应该怎样读这本书？" class="headerlink" title="我应该怎样读这本书？"></a>我应该怎样读这本书？</h3><p>最好是按部就班的读。第1章，第2章，第3章..读到第9章结束后你就会感到很轻松了，但开头部分任然是非常重要的。</p>
+<p>本书设计的目的就是为了教会你用线性方法编程。更为高深的书可能会在你读到的点或段的地方标记，做出参考，这些标记在书中大量分布。但是本书的前半部分开头主要做一个实例，并且首先构建实例的一些特征量。另外，计算机程序设计的基本要素就是排序，它来自于纽约大学Tisch艺术学院(<a href="http://itp.nyu.edu" target="_blank" rel="external">http://itp.nyu.edu</a>)交互式通信计划(ITP)一群有耐心的学生几年的实验。</p>
+<p>本书的23个章节共分为10课。前9章主要介绍计算机图形学并且包括了一些编程前的基本理论知识。第10到第12章则不需要学习新的知识，而是尝试使用增量法去开发更大的项目。第13章到23章进行基础扩展延伸，并提供了许多进一步的实例，比如从3D技术到现场视频合成，到可视化数据。<br>把书分成“课程”是为了便于跟好的消化知识。一个课程结束，我建议你先不要急着往下读，而是试着把课程中的章节结合起来制作成一个项目，这些项目能给你提供一些启示。</p>
+<h3 id="这是一本教科书吗？"><a href="#这是一本教科书吗？" class="headerlink" title="这是一本教科书吗？"></a>这是一本教科书吗？</h3><p>本书被作为入门级编程课程或者自学者的学习教材。</p>
+<p>我要说的是本书的结构是为了让你从ITP的“计算机媒体导论”中脱离出来。如果没有本班老师（Dan O’Sullivan, Danny Rozin, Chris Kairalla, Shawn Van Every, Nancy Lewis, Mark Napier, and James Tu）和几百个学生的帮助，本书就不会出版。</p>
+<p>坦白的说，我在本书中写的知识比我在一学期入门课程上教的还要多一点。本书的23章大概包括了我在课堂上讲的所有细节。但是，无论你是在课堂上学习本书还是自学，它都能很合理的让你在几个月内把它消化掉。当然，你可以选择快速阅读本书，但是当你要结合书中的知识实际的写代码或者开发项目的话，你任然花费需要大量的时间。如果本书叫做“10天学会编程”当然会很有吸引力，但这是不现实的。</p>
+<p>以下是14周课程中学习安排的一个例子：<br><img src="http://7xo04p.com1.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160201152843.png" alt=""><br><img src="http://7xo04p.com1.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160201152921.png" alt=""></p>
+<h3 id="书里有测试吗？"><a href="#书里有测试吗？" class="headerlink" title="书里有测试吗？"></a>书里有测试吗？</h3><p>书只能带你走这么远。关键是要不断的练习，练习再练习。假如你现在只有十岁，并正在学习小提琴。你的老师会告诉你要天天练习它。这看起来也的确挺合理。同样的，本书也需要你尽可能的进行大量的练习。</p>
+<p>有时你在学习过程中，脑子可能会短路。通过练习可以很好地避免这种情况的发生。并且当你想要做什么东西的时候，你可以很容易的结合练习去调整开发。</p>
+<p>书里的很多习题都可以在几分钟之内完成。一些困难点的题目可能要长达一个小时。随着你学的越来越深，你可能在一个项目上卡几个小时，几天，几周，甚至更久，但这是好事。这就是本书的结构这样设计的原因。我建议在每节课之间停下来休息一下，试着用Processing去做一些东西。我们在每节课都提供了如何制作工程项目的指导。</p>
+<p>本书所有习题的答案都能在本书网站上找到。</p>
+<h3 id="你们还有网站？"><a href="#你们还有网站？" class="headerlink" title="你们还有网站？"></a>你们还有网站？</h3><p>是的。本书的网址就是：<a href="http://www.learningprocessing.com" target="_blank" rel="external">http://www.learningprocessing.com</a></p>
+<p>在网站里你可以发现：</p>
+<ul>
+<li>书中所有练习的答案。</li>
+<li>下载本书中所有的代码。</li>
+<li>书中例子效果在线展示。</li>
+<li>书中错误的修正。</li>
+<li>书中的额外附加部分。</li>
+<li>提问和讨论页面。</li>
+</ul>
+<p>因为书中很多的例子使用的颜色和动画都是黑白色，静态的页面也不会提供给你完整的图片。所以当你阅读的时候，你可以结合网上的例子看，或者下载到电脑里运行看看效果。</p>
+<p>本书的网址不仅仅充满着丰富资源，也不是官网(<a href="http://www.processing.org" target="_blank" rel="external">http://www.processing.org</a>)的替代品。在这里，你会发现Processing的相关资料，更多有趣的东西，和一个热闹的论坛。</p>
+<h3 id="循序渐进"><a href="#循序渐进" class="headerlink" title="循序渐进"></a>循序渐进</h3><p><strong>递进式发展的哲学方式</strong><br>在我们开始学习之前，还有许多东西要讨论。这种方式是我学习编程和形成这种风格的书的巨大推动力。”递进式发展的哲学”是由我以前的教授提出的，也许我们可以更简单地把它叫做”循序渐进的方法”。</p>
+<p>无论你是新手，或是一个有多年编程经验，做过项目的程序员，都不要想着一下子去掌握很多东西。可能你梦想是用Processing做uber程序，或者是用Perlin程序生成三维的神经网络，或者是通过抓取Web上的新闻进行人工智能的数据挖掘。</p>
+<p>有远大的想法是没错，但最重要的是你要学会如何把你的想法分成几部分，一部分一部分地去完成它。前面的例子是有点傻。不过，如果你坐下来把它所有的功能都试一遍。我相信你会找到对应你问题的解决方法。</p>
+<p>为了方便演示，我们简单的说，假如你想要编写太空侵略者游戏。(就是这个：<a href="http://en.wikipedia.org/wiki/Space_Invaders" target="_blank" rel="external">http://en.wikipedia.org/wiki/Space_Invaders</a>)。虽然这本书并不是专门编写游戏的书，但你仍然能在本书中找打如何编写它的方法。根据我们刚刚的理念，我们需要一步一步地进行来把太空侵略者游戏分成几小部分。如下：</p>
+<ol>
+<li>编写飞船。</li>
+<li>编写侵略者。</li>
+<li>编写评分系统。</li>
+</ol>
+<p>好了，我们把程序分成了三部分，但任务还没有完成。关键是，要把问题拆分成得尽可能的小。你要学会在合适的情况下对大块的东西进行拆分。虽然上面这个例子看起来已经被拆分的很小了，而且貌似来很简单。毕竟如果你要开发一个更加复杂的游戏，就不会感到这么简单了，但是如果按照这种方法去分成小的部分，就会感到轻松一点。</p>
+<p>考虑到这一点，我们尝试把步骤一分得更小一点。就是说把步骤一分成6部分：第一个部分最简单：显示一个三角形；然后每走一步，稍稍改变一点：移动三角形；随着工程项目的慢慢深入，我们最终会完成它。<br>1.1 在屏幕上绘制一个三角形代表飞船。<br>1.2 把三角形放在屏幕的底部。<br>1.3 让三角形可以稍微的移动。<br>1.4 制作让三角形左右移动的动画效果。<br>1.5 当按下右键时，三角形从左往右移。<br>1.6 当按下左键时，三角形从右往左移。</p>
+<p>当然，这只是整个太空侵略者游戏设计中的一小部分，但它表达了一种重要的思考方法。这种方法的好处不仅仅是更容易编写程序，而且方便进行调试。调试指的是从编写的计算机程序中发现错误，并把它们锁定以便程序正常运行。你可能在Windows操作系统中听说过bugs，它指的是存在于代码中的一些微小而神秘的错误。但在我们这里，bug就简单的指错误。每次当你想要编写一些东西时，它可能并不会像你想的那样正常的运行。所以如果你一次就编写完整个程序，那你可能很难找到所有的错误。但是用循序渐进分布的方法可以让你一步一步地发现错误，并且修正它。</p>
+<p>递进式开发思想对于你去学习面向对象编程来说真的非常好用，这种方法也是本书的核心思想。对象的概念将会在第3课第8章重点介绍，它可以帮助我们开发模块化的项目工程，同时也是一种很好的编程方法。可重复使用的特性也是它很重要的特点。比如你已经编写好了游戏中的太空船的代码，下一步想让他攻击小行星，那么你只需要围绕着你需要的部分（比如在这里指太空船）进行开发。</p>
+<h3 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h3><p>前面所说的所有东西，在计算机里都是围绕着算法来实现的。算法指的是能够解决一些特殊问题的指令顺序列表。和递进式开发思想一样，算法本质是为了更好的用代码实现的想法。</p>
+<p>你会在第一章开始前尝试写一些关于日常生活的算法，比如刷牙。放心，这些算法指令都非常简单（比如：把牙刷向左移动1厘米）。</p>
+<p>想象一下，你必须给一个完全不熟悉牙膏，牙刷和牙的人提供指示，让他去完成任务。这就是编程的方法。计算机不过是一台机器，它按指令精准的执行而与其它无关。这就是我们作为程序员旅程的开始，我们将从这里学习如何与我们的朋友——计算机进行交流。</p>
+<p>给你的一些建议：</p>
+<ul>
+<li>不同的情况对应着不同的事情。你知道如何在指令中使用“如果”和“否则”语句吗？（比如：如果水太冷就加点热水，否则就加点冷水。）</li>
+<li>学会在指令中运用“重复”指令，例如：刷子上下移动，重复5次。</li>
+</ul>
+<p>还有，要注意的是我们步骤一般是从0开始。在编程中，我们常常从0开始计数，我们要养成这个习惯并让我们的想法振翅翱翔吧。</p>
+<p><img src="http://7xo04p.com1.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160210131019.png" alt=""></p>
+<h2 id="课程一-开始入门"><a href="#课程一-开始入门" class="headerlink" title="课程一  开始入门"></a>课程一  开始入门</h2><h3 id="像素"><a href="#像素" class="headerlink" title="像素"></a>像素</h3><blockquote>
+<p>“千里之行始于足下” 　　　　　　　　　 ————老子</p>
+</blockquote>
+<p>本章内容：<br>　　像素坐标的概念。<br>　　基本图形：点，线，矩形以及椭圆。<br>　　颜色：灰度，”RGB”。<br>　　颜色的透明度。<br>注意！本章并没有任何编程的内容。我们做的仅仅是把脚舒服地泡在水里，用文本命令把你的想法在屏幕上创建出来，这就是代码。</p>
+<h4 id="坐标纸"><a href="#坐标纸" class="headerlink" title="坐标纸"></a>坐标纸</h4><p>本书将教会你如何在计算媒体的背景下编程，我们会使用Processing开发环境作为讨论和开发例子的基础。首先，我们需要拿出一张纸，画一条直线。图片上两个点以及两个点之间最短的距离就是我们开始的地方。<br><img src="http://7xo04p.com1.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160211142705.png" alt=""></p>
+<p>图1.1里有一条从点A（1,0）到点B（4,5）的直线。如果你想让你的朋友帮你画一条相同的线，你可以对他说”帮我画一条从点（1,0）到点（4，5）的直线”。好，现在把你这个朋友当做电脑，你要指导你这个电子朋友在屏幕上把这条线画出来。这同样可以做到（但这次你需要使用精准的格式），它的命令是这样的：<br>　　　　line(1,0,4,5);<br>恭喜你！你已经学会用计算机代码画出了一条线了。我们以后将会学到更多正规的格式，但即使你现在对他并不太了解，它仍然很有意义。我们给计算机下达命令（我们也可以称之为功能），让计算机按”line”执行。我们为这条线指定一些参数从A（1,0）到B（4,5）。如果你把这行代码看成一句话，它的功能是line这个动词，它的参数就是对象，那么必须知道代码是以分号作为结束而不是以句号为结束。<br><img src="http://7xo04p.com1.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160212123324.png" alt=""><br>你要意识到计算机屏幕也不过只是一张方格纸而已。屏幕上每一个像素点就是坐标的两个数字——x(水平坐标),y(垂直坐标)，它们决定了空间中点的位置。我们要做的就是用像素点来显示颜色和形状。<br>但是，这里有要注意的地方。eighth grade（笛卡尔坐标系）的原点坐标是(0,0),y轴方向指向上方，x轴方向指向右方（这里指的是正方向，负方向分别是下方和左方）。但对于计算机窗口的像素坐标系统，(0,0)坐标放在左上方，正方向分别为向右水平和向下垂直方向。如图1.3。<br><img src="http://7xo04p.com1.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160217115714.png" alt=""></p>
+<p>习题1-1：看了我们如何画”line(1,0,4,5)”后，我猜你一定想还想画矩形，圆形或者三角形。用英语把他们写出来，并翻译成代码吧。<br><img src="http://7xo04p.com1.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160217120720.png" alt=""></p>
+<h4 id="一些简单的图形"><a href="#一些简单的图形" class="headerlink" title="一些简单的图形"></a>一些简单的图形</h4><p>我们书中的大部分实例本质都是与视觉有关的。可能你以后会学习用Processing开发交互式游戏，艺术品算法，动画logo设计等等，但是它们的核心都是通过设置像素点来对每一个程序进行设置。最简单的入门的方法就是从学习画简单的基本形状开始。这和我们小学学画画没什么不同，只不过我们在这里用的是代码而不是蜡笔。</p>
+<p>现在我们从图1.4的四个基本形状开始学习吧。<br><img src="http://7xo04p.com1.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160217122054.png" alt=""><br>对于每一种形状，我们都要思考，要把它放在哪，给它指定大小（和形状），并且学会用Processing去处理这些信息。在下图中（图1.5）假设有一个宽和高都为10像素的窗口。这的确很不切实际，因为我们通常编写代码的工作窗口都是相当大的（10×10像素勉强只有几毫米屏幕大小）。不过对于讲解来说，用小的尺寸和像素可以有更好的效果，因为它们可以在坐标纸上显示，以便更好的说明每一行代码的内部运作原理。<br><img src="http://7xo04p.com1.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160222164748.png" alt=""><br>点是最好画的图像，也最好入门。要画一个点的话，我们只需要一个x坐标和一个y坐标，如图1.5。当然，画一条线也不很困难，一条线需要两个点，如图1.6。<br><img src="http://7xo04p.com1.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160222164814.png" alt=""><br>等到我们要画矩形时，就会有一点复杂了。在Processing中，矩形由矩形德尔左上角坐标以及宽和高构成。（如图1.7）<br><img src="http://7xo04p.com1.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160222164830.png" alt=""><br>第二种绘制矩形的方法是制定一个中心点，以及宽和高构成，如图1.8。如果我们想用这种方法，我们必须表明在使用指令画矩形之前使用“中心”模式。需要注意的是Processing是区分大小写的。顺便说一下，默认的模式是“角”模式，这就是我们以图1.7作为开始的原因。<br><img src="http://7xo04p.com1.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160222164847.png" alt=""><br>最后，我们还可以用两个点画矩形（左上角和右下角两个点）。这个模式也是“角”模式（如图1.9）。<br><img src="http://7xo04p.com1.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160222164905.png" alt=""><br>当我们能很容易画矩形时，画椭圆就是把它折断。事实上，他们都是用<strong>rect()</strong>函数，不同的是画椭圆是画包装盒的样子的矩形（如图1.11）。<strong>ellipse()</strong> 的默认模式是“中心”模式而不是像<strong>rect()</strong>一样的“角”模式，如图1.10。<br><img src="http://7xo04p.com1.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160222164947.png" alt=""><br>图1.10中很重要的一点就是要认识到椭圆并不能看做一种特殊的圆。Processing有一种内置的方法用于创建圆形时选择合适的像素。在这个放大的图片上，我们得到一堆圆状图像的方块。但在电脑屏幕上缩小后我们就可以得到一个漂亮的椭圆。以后，我们将会看到Processing在我们开发算法为单个像素点着色时提供的强大的功能支持(事实上，我们现在已经可以想象我们将会如何一次又一次的使用这些“点”)。但是现在我们只要会用“椭圆”这个语句完成一些复杂的工作即可。<br><img src="http://7xo04p.com1.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160222170107.png" alt=""><br>当然，点，线，椭圆以及长方形不是Processing功能库中仅有的几种形状。在第2章中，我们将会看到如何使用Processing参考文献为我们提供的完整的可用的绘图函数列表，以及所需的参数，语法样式和形象的描述。现在，作为练习，你可以想象一下对于其它图形来说，哪些参数是必须的。(如图1.12):</p>
+<p><strong>triangle( )</strong></p>
+<p><strong>arc( )</strong></p>
+<p><strong>quad( )</strong></p>
+<p><strong>curve( )</strong><br><img src="http://7xo04p.com1.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160222165010.png" alt=""></p>
+<p>练习1-2：通过代码在下面的空白表格中绘制相应的图形。<br><img src="http://7xo04p.com1.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160222165051.png" alt=""><br>练习1-3：根据下图，反向写出对应的指令表。<br><img src="http://7xo04p.com1.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160222165124.png" alt=""></p>
+<h4 id="颜色灰度"><a href="#颜色灰度" class="headerlink" title="颜色灰度"></a>颜色灰度</h4></span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Learning-Processing/" rel="tag">#Learning Processing</a>
+          
+            <a href="/tags/翻译/" rel="tag">#翻译</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/02/22/hello-world/" rel="prev">Hello World</a>
+            
+          </div>
+
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/01/19/机器学习入门（1）————机器学习实战遇到的问题/" rel="next">机器学习入门（1）————机器学习实战遇到的问题</a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+            </div>
+
+            
+
+            
+              <div class="comments" id="comments">
+                
+              </div>
+            
+        </div>
+
+        
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目錄
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            本站概覽
+          </li>
+        </ul>
+      
+
+      <section class="site-overview">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="/images/default_avatar.jpg" alt="John Doe" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">John Doe</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description"></p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-name">文章</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-name">分類</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-name">標籤</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#《Processing学习》"><span class="nav-number">1.</span> <span class="nav-text">《Processing学习》</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#目录"><span class="nav-number">1.1.</span> <span class="nav-text">目录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#介绍"><span class="nav-number">1.2.</span> <span class="nav-text">介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#这是一本什么书？"><span class="nav-number">1.2.1.</span> <span class="nav-text">这是一本什么书？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#本书适合哪些人？"><span class="nav-number">1.2.2.</span> <span class="nav-text">本书适合哪些人？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是Processing"><span class="nav-number">1.2.3.</span> <span class="nav-text">什么是Processing</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#但我不需要学习-？"><span class="nav-number">1.2.4.</span> <span class="nav-text">但我不需要学习__？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#通过本书做一些东西吧！"><span class="nav-number">1.2.5.</span> <span class="nav-text">通过本书做一些东西吧！</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#我应该怎样读这本书？"><span class="nav-number">1.2.6.</span> <span class="nav-text">我应该怎样读这本书？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#这是一本教科书吗？"><span class="nav-number">1.2.7.</span> <span class="nav-text">这是一本教科书吗？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#书里有测试吗？"><span class="nav-number">1.2.8.</span> <span class="nav-text">书里有测试吗？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#你们还有网站？"><span class="nav-number">1.2.9.</span> <span class="nav-text">你们还有网站？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#循序渐进"><span class="nav-number">1.2.10.</span> <span class="nav-text">循序渐进</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#算法"><span class="nav-number">1.2.11.</span> <span class="nav-text">算法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#课程一-开始入门"><span class="nav-number">1.3.</span> <span class="nav-text">课程一  开始入门</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#像素"><span class="nav-number">1.3.1.</span> <span class="nav-text">像素</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#坐标纸"><span class="nav-number">1.3.1.1.</span> <span class="nav-text">坐标纸</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#一些简单的图形"><span class="nav-number">1.3.1.2.</span> <span class="nav-text">一些简单的图形</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#颜色灰度"><span class="nav-number">1.3.1.3.</span> <span class="nav-text">颜色灰度</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+    </main>
+
+    <footer id="footer" class="footer">
+        <div class="footer-inner">
+            <div class="copyright" >
+  
+  &copy; &nbsp; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="icon-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 強力驅動
+</div>
+
+<div class="theme-info">
+  主題 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+
+        </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+</div>
+
+<script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+    
+    
+
+  
+
+
+  
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.4"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.4"></script>
+  
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.4" id="motion.global"></script>
+
+
+
+  <script type="text/javascript" src="/js/search-toggle.js"></script>
+
+
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.4" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 0.4 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    var $tocContent = $('.post-toc-content');
+    if (isDesktop() && CONFIG.sidebar === 'post') {
+      if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+        displaySidebar();
+      }
+    }
+  });
+</script>
+
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        if (CONFIG.sidebar === 'always') {
+            displaySidebar();
+        }
+    });
+</script>
+
+
+
+
+
+
+
+
+<!-- lazyload -->
+<script type="text/javascript" src="/js/lazyload.js"></script>
+<script type="text/javascript">
+    jQuery(function () {
+        jQuery("#posts img").lazyload({
+            placeholder: "/images/loading.gif",
+            effect: "fadeIn"
+        });
+    });
+</script>
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery-lazyload/1.9.5/jquery.lazyload.min.js"></script>
+    <script type="text/javascript">
+      jQuery(function() {          
+          jQuery("img").lazyload({
+            placeholder:"http://www.arao.me/loading.gif",
+              effect:"fadeIn"
+            });
+          });
+  </script>
+</body>
+</html>
