@@ -68,7 +68,9 @@
 <meta property="og:image" content="http://7xo04p.com1.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160222165010.png">
 <meta property="og:image" content="http://7xo04p.com1.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160222165051.png">
 <meta property="og:image" content="http://7xo04p.com1.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160222165124.png">
-<meta property="og:updated_time" content="2016-02-22T09:07:54.747Z">
+<meta property="og:image" content="http://7xo04p.com1.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160223184234.png">
+<meta property="og:image" content="http://7xo04p.com1.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160223213835.png">
+<meta property="og:updated_time" content="2016-02-23T13:46:09.905Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Daniel Shiffman——《Learning Processing》个人翻译">
 <meta name="twitter:description" content="本书为Daniel Shiffman的《Learning Processing》的个人翻译。原书地址：http://pan.baidu.com/s/1gelQAg7       密码：naja
@@ -338,7 +340,13 @@
 <p><strong>quad( )</strong></p>
 <p><strong>curve( )</strong><br><img src="http://7xo04p.com1.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160222165010.png" alt=""></p>
 <p>练习1-2：通过代码在下面的空白表格中绘制相应的图形。<br><img src="http://7xo04p.com1.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160222165051.png" alt=""><br>练习1-3：根据下图，反向写出对应的指令表。<br><img src="http://7xo04p.com1.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160222165124.png" alt=""></p>
-<h4 id="颜色灰度"><a href="#颜色灰度" class="headerlink" title="颜色灰度"></a>颜色灰度</h4></span>
+<h4 id="颜色灰度"><a href="#颜色灰度" class="headerlink" title="颜色灰度"></a>颜色灰度</h4><p>正如我们在章节.1.2中学到的，在屏幕上放置图形的基本构造就是一个像素坐标。你可以优雅的指示计算机在特定的位置画指定尺寸的图形。<br>尽管如此，我们还缺少了一个主要元素————色彩。</p>
+<p>在数字化的世界中，精度是必须的。我们不能说”嘿，你能将那个圆变成绿色吗？”。因此，颜色被设定成一系列的数字。我们从最简单的地方开始学习，即：黑色，白色或者灰度。灰度等级规定：0代表黑色，255代表白色。其它灰度等级，如：50,87,162，209等都是从黑到白的灰色。如图1.13<br><img src="http://7xo04p.com1.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160223184234.png" alt=""></p>
+<p><strong>0-255的数字是随机的吗？</strong><br>给定形状的颜色需要存储在计算机的内存中。内存是一大串”0”和”1”的序列（其实就是打开和关断）。每一个开关就是1位，8个开关就是1个字节。想象一下，一个序列中有8个开关，那么有多少种组合方法？答案就是有256种组合，就是从0-255。我们将使用8位颜色构成灰度范围和24位全彩色(8位为每一个红色，绿色和蓝色的颜色分量，见章节1.4)</p>
+<p>明白了它们的工作原理，我们现在可以为图形调节特定的灰度颜色。在Processing中，每个图形都有一个stroke()或full()，也可能两个都有。stroke()用于图形的轮廓，full()用于图形的内部。很明显，线和点只能使用stroke()。</p>
+<p>如果我们忘了设置颜色时，Processing默认将会给stroke()设定为黑色(0),给full()设定为白色(255)。注意，我们现在用更为实际的数字来设定像素位置，我们假设有一个200×200的窗口，如图1.14。<br><em>rect(50,40,75,100);</em><br><img src="http://7xo04p.com1.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160223213835.png" alt=""></p>
+<p>在画图形前我们添加stroke()和full()功能可以为其设置颜色。这很像教你的朋友用特殊的笔在方格纸上画图，你必须在他(或她)开始画之前告诉要设置颜色。我们还有background()设置背景的功能，它可以为我们设置图形的背景颜色。</p>
+</span>
       
     </div>
 
